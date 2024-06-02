@@ -1,0 +1,11 @@
+{
+  "common": {
+    "translate-button": "FR",
+    "translated-text": "C'est du français",
+    "translate-home": "Accueil",
+    "translate-about": "À propos",
+    "translate-work": "Travail",
+    "translate-hi": "Salut, Je suis ",
+    "translate-fullStack": "developpeur web full stack"
+  }
+}

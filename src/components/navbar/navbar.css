@@ -1,0 +1,157 @@
+nav {
+  background-color: white;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: white;
+  border-bottom: 1px solid #333;
+}
+.nav-buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.nav-buttons > button {
+  margin: 0.2rem;
+}
+.text-logo {
+  cursor: default;
+}
+.text-logo:hover {
+  color: #04aa6d;
+}
+.nav_container.navbar.dark {
+  color: #fff;
+}
+.dark a {
+  color: #fff;
+}
+
+nav .menu {
+  height: 0.3rem;
+  width: 2.5rem;
+  background-color: white;
+  border-radius: 0.2rem;
+  margin: 0.15rem;
+  cursor: pointer;
+}
+.select-box {
+  padding: 0.2rem;
+}
+.lang {
+  padding: 3px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.lang:hover {
+  background-color: #f9f9f9;
+}
+
+.lang:focus {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.switch-box {
+  padding: 0.3rem;
+}
+.toggle {
+  height: 23px;
+  width: 50px;
+}
+
+.toggle img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.toggle .react-switch-bg {
+  background-color: #000;
+}
+
+.toggle .react-switch-handle {
+  background-color: #ffffff;
+}
+
+.toggle .react-switch-handle:before {
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+.toggle .react-switch-handle:after {
+  box-shadow: 0px 0px 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+div ul {
+  display: none;
+}
+
+div ul.nav-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.nav-list {
+  overflow: hidden; /* hide the overflow */
+  max-height: 0; /* initial state: hidden */
+  transition: max-height 0.5s ease-in-out; /* add transition effect */
+}
+
+.nav-list.active {
+  max-height: 9rem; /* or any other value that fits your needs */
+}
+
+div ul li a {
+  display: inline-block;
+  color: #333;
+  text-align: center;
+  padding: 0.7rem 2rem 0.7rem 2rem;
+  text-decoration: none;
+  font-size: 1.1rem;
+  width: 4.8rem;
+  font-weight: bold;
+}
+
+div ul li a:not(.active):hover {
+  background-color: #c8bbbb;
+  color: black;
+}
+
+div ul li a.active {
+  background-color: #04aa6d;
+  color: white;
+}
+.menu-button {
+  display: block;
+  padding: 0.3rem 0.3rem 0.1rem 0.3rem;
+}
+button > svg {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+@media (min-width: 500px) {
+  .menu-button {
+    display: none;
+  }
+  /* Showing the navigation on desktop */
+  div ul {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+    max-height: none;
+  }
+  .nav-list {
+    max-height: none; /* Ensure it's always visible on desktop */
+    transition: none; /* Remove transition effect on desktop */
+  }
+}

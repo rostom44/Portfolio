@@ -1,0 +1,8 @@
+.box-container {
+  border: 0.2rem solid transparent;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  background-color: rgba(98, 133, 110, 0.5);
+}
