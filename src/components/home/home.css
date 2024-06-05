@@ -6,3 +6,28 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   background-color: rgba(98, 133, 110, 0.5);
 }
+h1 > span {
+  color: #04aa6d;
+  font-weight: bolde;
+}
+.more {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.25rem;
+  font-style: italic;
+}
+.more > svg {
+  cursor: pointer;
+  padding-top: 0.4rem;
+}
+.more a {
+  text-decoration: none;
+  margin-left: 0.35rem; /* Add some space between the text and icon */
+  color: #04aa6d;
+}
+.more a:hover {
+  color: black;
+}
+.more a:not(.active) {
+  text-decoration: none;
+}

@@ -1,3 +1,4 @@
+import { MdOutlineDoubleArrow } from "react-icons/md";
 import "./home.css";
 import { useTranslation } from "react-i18next";
 export default function Intro() {
@@ -10,7 +11,12 @@ export default function Intro() {
         <span>ROSTOM</span>
       </h1>
       <h2>{t("common.translate-fullStack")}</h2>
-      <p></p>
+      <p className="more">
+        {t("common.translate-aboutMe")}
+        <a href="/about">
+          <MdOutlineDoubleArrow />
+        </a>
+      </p>
     </div>
   );
 }
