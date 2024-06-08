@@ -53,3 +53,12 @@ h1 > span {
   height: 100%;
   object-fit: cover; /* Maintain aspect ratio and cover the container */
 }
+
+.introHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.reactLogo {
+  width: 12rem !important;
+}
