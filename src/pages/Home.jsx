@@ -1,6 +1,8 @@
 import Intro from "../components/home/intro";
 import Quote from "../components/home/quote";
 import Github from "../components/home/github";
+import Linkdin from "../components/home/linkedin";
+import Skills from "../components/home/skills";
 import { useTheme } from "../darkTheme/ThemeProvider";
 export default function Home() {
   const { darkMode } = useTheme();
@@ -9,8 +11,11 @@ export default function Home() {
       <div className="homeHeader">
         <Intro className={darkMode ? "box-container dark" : "box-container"} />
         <Github className={darkMode ? "box-container dark" : "box-container"} />
+        <Linkdin
+          className={darkMode ? "box-container dark" : "box-container"}
+        />
       </div>
-
+      <Skills className />
       <Quote />
     </div>
   );

@@ -60,12 +60,12 @@ h1 > span {
   align-items: center;
 }
 .reactLogo {
-  width: 12rem !important;
+  display: none !important;
 }
 .homeHeader {
   display: flex;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
 }
 .box {
   display: flex;
@@ -77,4 +77,18 @@ h1 > span {
 .github > svg {
   width: 10rem;
   height: 10rem;
+}
+@media (min-width: 500px) {
+  .homeHeader {
+    display: flex;
+
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 800px) {
+  .reactLogo {
+    display: block !important;
+    width: 12rem !important;
+  }
 }
