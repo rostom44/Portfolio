@@ -8,7 +8,7 @@
 }
 h1 > span {
   color: #04aa6d;
-  font-weight: bolde;
+  font-weight: bolder;
 }
 .more {
   display: flex;
@@ -18,16 +18,38 @@ h1 > span {
 }
 .more > svg {
   cursor: pointer;
-  padding-top: 0.4rem;
 }
 .more a {
   text-decoration: none;
   margin-left: 0.35rem; /* Add some space between the text and icon */
   color: #04aa6d;
+  padding-top: 0.1rem;
 }
 .more a:hover {
   color: black;
 }
 .more a:not(.active) {
   text-decoration: none;
+}
+
+.img-circle {
+  display: inline-block;
+  border-radius: 50%; /* Use percentage for perfect circle */
+  overflow: hidden; /* Hide overflowing content */
+  /* background-color: #04aa6d; */
+  background-color: #029a63;
+
+  height: 12rem;
+  width: 12rem;
+}
+.img-circle.dark {
+  /* background-color: aqua; */
+  background-color: #c8bbbb;
+}
+
+.img-circle img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
 }
