@@ -25,12 +25,12 @@ export default function Intro() {
         </Canvas>
       </div>
       <h1>
-        {t("common.translate-hi")}
+        {t("home.translate-hi")}
         <span>ROSTOM</span>
       </h1>
-      <h2>{t("common.translate-fullStack")}</h2>
-      <p className="more">
-        {t("common.translate-aboutMe")}
+      <h2>{t("home.translate-fullStack")}</h2>
+      <p className="icons">
+        {t("home.translate-aboutMe")}
         <a href="/about">
           <MdOutlineDoubleArrow />
         </a>

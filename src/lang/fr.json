@@ -4,9 +4,13 @@
     "translated-text": "C'est du français",
     "translate-home": "Accueil",
     "translate-about": "À propos",
-    "translate-work": "Travail",
+    "translate-work": "Travail"
+  },
+
+  "home": {
     "translate-hi": "Salut, Je suis ",
     "translate-fullStack": "developpeur web full stack",
-    "translate-aboutMe": "voir plus"
+    "translate-aboutMe": "voir plus",
+    "translate-git": "jetez un oeil sur mon profil github"
   }
 }

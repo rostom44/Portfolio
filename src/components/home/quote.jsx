@@ -9,7 +9,7 @@ export default function Quote() {
     axios
       .get("https://api.quotable.io/random")
       .then((response) => {
-        setQuote(response.data); // Assuming the quote is in the data property of the response
+        setQuote(response.data);
       })
       .catch((error) => {
         console.log(error);

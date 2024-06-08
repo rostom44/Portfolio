@@ -4,9 +4,13 @@
     "translated-text": "This is english",
     "translate-home": "Home",
     "translate-about": "About",
-    "translate-work": "Work",
+    "translate-work": "Work"
+  },
+
+  "home": {
     "translate-hi": "hey, I'm ",
     "translate-fullStack": "Full stack web developer",
-    "translate-aboutMe": "learn more"
+    "translate-aboutMe": "learn more",
+    "translate-git": "check my github profile"
   }
 }

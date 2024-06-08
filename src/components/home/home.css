@@ -10,25 +10,25 @@ h1 > span {
   color: #04aa6d;
   font-weight: bolder;
 }
-.more {
+.icons {
   display: flex;
   justify-content: flex-end;
   font-size: 1.25rem;
   font-style: italic;
 }
-.more > svg {
+.icons > svg {
   cursor: pointer;
 }
-.more a {
+.icons a {
   text-decoration: none;
   margin-left: 0.35rem; /* Add some space between the text and icon */
   color: #04aa6d;
   padding-top: 0.1rem;
 }
-.more a:hover {
+.icons a:hover {
   color: black;
 }
-.more a:not(.active) {
+.icons a:not(.active) {
   text-decoration: none;
 }
 
@@ -61,4 +61,20 @@ h1 > span {
 }
 .reactLogo {
   width: 12rem !important;
+}
+.homeHeader {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.8rem;
+}
+.github > svg {
+  width: 10rem;
+  height: 10rem;
 }
