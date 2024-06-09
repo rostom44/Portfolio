@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unknown-property */
 import { MdOutlineDoubleArrow } from "react-icons/md";
-
+import { Suspense } from "react";
 import { useTheme } from "../../darkTheme/ThemeProvider";
 import { useTranslation } from "react-i18next";
 import { Canvas } from "@react-three/fiber";
@@ -20,7 +20,9 @@ export default function Intro() {
         <Canvas className="reactLogo">
           <ambientLight />
           <OrbitControls autoRotate enableZoom={false} />
-          <ReactLogo />
+          <Suspense>
+            <ReactLogo />
+          </Suspense>
           <Environment preset="forest" />
         </Canvas>
       </div>
