@@ -18,31 +18,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  line-height: 1.8rem;
 }
 /* general */
 
-.icons {
-  display: flex;
-  justify-content: flex-end;
-  font-size: 1.25rem;
-  font-style: italic;
-}
-.icons > svg {
-  cursor: pointer;
-}
-.icons a {
-  text-decoration: none;
-  margin-left: 0.35rem; /* Add some space between the text and icon */
-  color: #04aa6d;
-  padding-top: 0.1rem;
-}
-.icons a:hover {
-  color: black;
-}
-.icons a:not(.active) {
-  text-decoration: none;
-}
 /* intro */
 
 h1 > span {
@@ -62,7 +40,7 @@ h1 > span {
 }
 .img-circle.dark {
   /* background-color: aqua; */
-  background-color: #c8bbbb;
+  background-color: lightslategray;
 }
 
 .img-circle img {
@@ -70,6 +48,27 @@ h1 > span {
   width: 100%;
   height: 100%;
   object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+.arrow {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.25rem;
+  font-style: italic;
+}
+.arrow > svg {
+  cursor: pointer;
+}
+.arrow a {
+  text-decoration: none;
+  margin-left: 0.35rem; /* Add some space between the text and icon */
+  color: lightslategray;
+  padding-top: 0.1rem;
+}
+.arrow a:hover {
+  color: #04aa6d;
+}
+.arrow a:not(.active) {
+  text-decoration: none;
 }
 
 .introHeader {
@@ -87,12 +86,28 @@ h1 > span {
 .github > svg {
   width: 10rem;
   height: 10rem;
+  color: lightslategray;
+}
+
+.github > svg:hover {
+  color: #111213;
+}
+a.github {
+  color: inherit !important;
 }
 /* github */
 /* linkedin */
 .linkedin > svg {
   width: 10rem;
   height: 10rem;
+  color: lightslategray;
+}
+
+.linkedin > svg:hover {
+  color: #0a66c2;
+}
+a.linkedin {
+  color: inherit !important;
 }
 /* linkedin */
 
@@ -169,7 +184,6 @@ h1 > span {
 @media (min-width: 500px) {
   .homeHeader {
     display: flex;
-
     flex-direction: row;
   }
 }

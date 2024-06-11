@@ -31,7 +31,7 @@ export default function Intro() {
         <span>ROSTOM</span>
       </h1>
       <h2>{t("home.translate-fullStack")}</h2>
-      <p className="icons">
+      <p className="arrow">
         {t("home.translate-aboutMe")}
         <a href="/about">
           <MdOutlineDoubleArrow />

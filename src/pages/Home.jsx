@@ -10,10 +10,8 @@ export default function Home() {
     <div>
       <div className="homeHeader">
         <Intro className={darkMode ? "box-container dark" : "box-container"} />
-        <Github className={darkMode ? "box-container dark" : "box-container"} />
-        <Linkdin
-          className={darkMode ? "box-container dark" : "box-container"}
-        />
+        <Github />
+        <Linkdin />
       </div>
       <Skills className />
       <Quote />
