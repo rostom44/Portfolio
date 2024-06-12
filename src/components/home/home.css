@@ -6,6 +6,7 @@
   margin: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   background-color: rgba(98, 133, 110, 0.5);
+  position: relative;
 }
 .homeHeader {
   display: flex;
@@ -13,6 +14,7 @@
   flex-direction: column;
   flex-wrap: wrap;
 }
+
 .box {
   display: flex;
   flex-direction: column;
@@ -181,10 +183,63 @@ a.linkedin {
 
 /* skills */
 
-@media (min-width: 500px) {
+/* quote */
+.quote-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.refresh {
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+  padding: 0;
+}
+.quote {
+  line-height: 1.5rem;
+  font-weight: 700;
+}
+blockquote > span {
+  font-style: italic;
+  font-size: larger;
+}
+cite {
+  display: flex;
+  justify-content: flex-end;
+  font-size: medium;
+  font-weight: 400;
+}
+.progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background-color: #4caf50;
+  animation: progressBar 18s linear infinite;
+}
+
+@keyframes progressBar {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+/* quote */
+
+@media (min-width: 702px) {
   .homeHeader {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .homeHeader > .box-container {
+    width: 35%;
+    margin: 0.5rem;
+  }
+  .homeMain {
+    margin: -0.5rem;
   }
 }
 
@@ -192,5 +247,9 @@ a.linkedin {
   .reactLogo {
     display: block !important;
     width: 12rem !important;
+  }
+  .homeBody {
+    margin-right: 2.5rem;
+    margin-left: 2.5rem;
   }
 }

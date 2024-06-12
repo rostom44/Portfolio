@@ -31,3 +31,9 @@ button {
   background-color: #121314;
   color: #fffcf4;
 }
+
+@media screen and (min-width: 500px) and (max-width: 950px) {
+  body {
+    overflow-x: hidden;
+  }
+}
