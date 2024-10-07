@@ -4,4 +4,4 @@ my future website
 
 # Note
 
-this portfolio is a work in progress and what you see is the starting structure for it
+this portfolio is a work in progress and what you see is the demo version to test it how it looks 
