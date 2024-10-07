@@ -29,12 +29,14 @@ export default function Navbar() {
               onChange={handleToggle}
               checked={darkMode}
               offColor="#000"
-              onColor="#04aa6d"
+              onColor="#74a8d5"
               checkedIcon={
                 <img
                   src={Moon}
                   alt="Moon Icon"
-                  style={{ paddingLeft: "0.19rem" }}
+                  style={{
+                    paddingLeft: "0.19rem",
+                  }}
                 />
               }
               uncheckedIcon={<img src={Sun} alt="Sun Icon" />}

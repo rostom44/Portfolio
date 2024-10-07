@@ -1,0 +1,20 @@
+{
+  "common": {
+    "translate-button": "EN",
+    "translated-text": "This is english",
+    "translate-home": "Home",
+    "translate-about": "About",
+    "translate-work": "Work",
+    "translate-temp": "coming soon"
+  },
+
+  "home": {
+    "translate-hi": "hey, I'm ",
+    "translate-fullStack": "Full stack web developer",
+    "translate-aboutMe": "learn more",
+    "translate-git": "Check my Github",
+    "translate-linkedin": "visit my linkedin",
+    "translate-skills": "Skills",
+    "translate-quote": "Quote:"
+  }
+}

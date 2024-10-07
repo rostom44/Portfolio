@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Language } from "../../Language";
+import { Language } from "../../lang/Language";
 import "./navbar.css";
 
 const Lang = () => {

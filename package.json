@@ -10,8 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@react-three/drei": "^9.105.6",
-    "@react-three/fiber": "^8.16.3",
+    "@react-three/drei": "^9.106.0",
+    "@react-three/fiber": "^8.16.8",
     "axios": "^1.6.8",
     "i18next": "^23.11.4",
     "i18next-browser-languagedetector": "^8.0.0",
@@ -21,6 +21,7 @@
     "react-icons": "^5.2.0",
     "react-router-dom": "^6.23.0",
     "react-switch": "^7.0.0",
+    "react-tooltip": "^5.26.4",
     "use-local-storage": "^3.0.0"
   },
   "devDependencies": {

@@ -1,0 +1,20 @@
+{
+  "common": {
+    "translate-button": "FR",
+    "translated-text": "C'est du français",
+    "translate-home": "Accueil",
+    "translate-about": "À propos",
+    "translate-work": "Travail",
+    "translate-temp": "Bientôt"
+  },
+
+  "home": {
+    "translate-hi": "Salut, Je suis ",
+    "translate-fullStack": "developpeur web full stack",
+    "translate-aboutMe": "voir plus",
+    "translate-git": "Consultez mon GitHub",
+    "translate-linkedin": "visitez mon linkedin",
+    "translate-skills": "Compétences",
+    "translate-quote": "Citation:"
+  }
+}

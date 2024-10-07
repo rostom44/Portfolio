@@ -1,0 +1,204 @@
+{
+  "quotes": [
+    {
+      "id": 1,
+      "content": {
+        "en": "Be obsessed with your potential",
+        "fr": "Sois obsédé par ton potentiel"
+      },
+      "author": "Unknown ?"
+    },
+    {
+      "id": 2,
+      "content": {
+        "en": "You think you know me, you only know what I allow you to know. So, think again",
+        "fr": "Tu penses me connaître, mais tu ne connais que ce que je te permets de savoir. Alors, réfléchis encore"
+      },
+      "author": "Unknown ?"
+    },
+    {
+      "id": 3,
+      "content": {
+        "en": "They aren't sorry because of what they did, they're sorry you found out",
+        "fr": "Ils ne sont pas désolés pour ce qu'ils ont fait, ils sont désolés que tu l'aies découvert"
+      },
+      "author": "Unknown ?"
+    },
+    {
+      "id": 4,
+      "content": {
+        "en": "Everything we see is a perspective, not the truth",
+        "fr": "Tout ce que nous voyons est une perspective, pas la vérité"
+      },
+      "author": "Marcus Aurelius"
+    },
+    {
+      "id": 5,
+      "content": {
+        "en": "When you build in silence, people don't know what to attack",
+        "fr": "Quand tu construis dans le silence, les gens ne savent pas quoi attaquer"
+      },
+      "author": "Unknown ?"
+    },
+    {
+      "id": 6,
+      "content": {
+        "en": "The way to get started is to quit talking and begin doing",
+        "fr": "La meilleure façon de commencer est d'arrêter de parler et de commencer à agir"
+      },
+      "author": "Walt Disney"
+    },
+    {
+      "id": 7,
+      "content": {
+        "en": "The best way to manipulate a man is to make him think he is manipulating you",
+        "fr": "La meilleure façon de manipuler un homme est de lui faire croire qu'il te manipule"
+      },
+      "author": "John Smith"
+    },
+    {
+      "id": 8,
+      "content": {
+        "en": "The eye sees only what the mind is prepared to comprehend",
+        "fr": "L'œil ne voit que ce que l'esprit est prêt à comprendre"
+      },
+      "author": "Robertson Davies"
+    },
+    {
+      "id": 9,
+      "content": {
+        "en": "Stress is caused by being 'here' but wanting to be 'there'",
+        "fr": "Le stress est causé par le fait d'être 'ici' tout en voulant être 'là-bas'"
+      },
+      "author": "Eckhart Tolle"
+    },
+    {
+      "id": 10,
+      "content": {
+        "en": "New beginnings are often disguised as painful endings",
+        "fr": "Les nouveaux départs sont souvent déguisés en fins douloureuses"
+      },
+      "author": "Lao Tzu"
+    },
+    {
+      "id": 11,
+      "content": {
+        "en": "If you're going to be weird, be confident about it",
+        "fr": "Si tu veux être bizarre, sois-en sûr de toi"
+      },
+      "author": "Unknown ?"
+    },
+    {
+      "id": 12,
+      "content": {
+        "en": "If a man knows more than others, he becomes lonely",
+        "fr": "Si un homme en sait plus que les autres, il devient seul"
+      },
+      "author": "Carl Jung"
+    },
+    {
+      "id": 13,
+      "content": {
+        "en": "Nobody watches you harder than the people who don't like you",
+        "fr": "Personne ne te surveille plus attentivement que ceux qui ne t'aiment pas"
+      },
+      "author": "Unknown ?"
+    },
+    {
+      "id": 14,
+      "content": {
+        "en": "It is a double pleasure to deceive the deceiver",
+        "fr": "Il est doublement plaisant de tromper le trompeur"
+      },
+      "author": "Niccolò Machiavelli"
+    },
+    {
+      "id": 15,
+      "content": {
+        "en": "There are words that say nothing, and there are silences that say everything",
+        "fr": "Il y a des mots qui ne disent rien, et des silences qui disent tout"
+      },
+      "author": "William Shakespeare"
+    },
+    {
+      "id": 16,
+      "content": {
+        "en": "You can tell the greatness of a man by what makes him angry",
+        "fr": "On peut mesurer la grandeur d'un homme par ce qui le met en colère"
+      },
+      "author": "Abraham Lincoln"
+    },
+    {
+      "id": 17,
+      "content": {
+        "en": "Spend money to save time vs. spending time to save money",
+        "fr": "Dépenser de l'argent pour gagner du temps contre passer du temps pour économiser de l'argent"
+      },
+      "author": "soloflow786 (Reddit)"
+    },
+    {
+      "id": 18,
+      "content": {
+        "en": "Talent hits a target no one else can hit. Genius hits a target no one else can see",
+        "fr": "Le talent touche une cible que personne d'autre ne peut atteindre. Le génie touche une cible que personne d'autre ne peut voir"
+      },
+      "author": "Arthur Schopenhauer"
+    },
+    {
+      "id": 19,
+      "content": {
+        "en": "If you knew how quickly people forget the dead, you would stop living to impress people",
+        "fr": "Si tu savais à quelle vitesse les gens oublient les morts, tu cesserais de vivre pour impressionner les autres"
+      },
+      "author": "Christopher Walken"
+    },
+    {
+      "id": 20,
+      "content": {
+        "en": "Active listeners notice what's said, deep listeners explore what isn't said",
+        "fr": "Les auditeurs actifs remarquent ce qui est dit, les auditeurs profonds explorent ce qui n'est pas dit"
+      },
+      "author": "Unknown ?"
+    },
+    {
+      "id": 21,
+      "content": {
+        "en": "If you can read this, thank a Software Developer",
+        "fr": "Si tu peux lire ceci, remercie un développeur"
+      },
+      "author": "Joseph M. Abou Nader"
+    },
+    {
+      "id": 22,
+      "content": {
+        "en": "Unlike the stomach, the brain doesn't alert you when it's empty",
+        "fr": "Contrairement à l'estomac, le cerveau ne te signale pas quand il est vide"
+      },
+      "author": "Arabic Proverb"
+    },
+    {
+      "id": 23,
+      "content": {
+        "en": "When you're good at something, you'll tell everyone. When you're great at something, they'll tell you",
+        "fr": "Quand tu es bon dans quelque chose, tu le diras à tout le monde. Quand tu es extraordinaire dans quelque chose, ils te le diront"
+      },
+      "author": "Walter Payton"
+    },
+    {
+      "id": 24,
+      "content": {
+        "en": "Travel and tell no one, live a true love story and tell no one, live happily and tell no one, people ruin beautiful things.",
+        "fr": "Voyage et ne dis rien, vis une véritable histoire d'amour et ne dis rien, vis heureux et ne dis rien, les gens ruinent les belles choses."
+      },
+      "author": "Khalil Gibran"
+    },
+    {
+      "id": 25,
+      "content": {
+        "en": "You must find the courage to leave the table when respect is no longer being served",
+        "fr": "Tu dois trouver le courage de quitter la table quand le respect n'est plus servi."
+      },
+      "author": "Tene Edwards"
+    }
+  ]
+}
