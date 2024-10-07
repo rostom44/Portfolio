@@ -11,8 +11,11 @@ import { FaNode } from "react-icons/fa6";
 
 import { Tooltip } from "react-tooltip";
 import { useTranslation } from "react-i18next";
+import { useTheme } from "../../darkTheme/ThemeProvider";
 export default function Skills() {
   const { t } = useTranslation();
+  const { darkMode } = useTheme();
+
   return (
     <div className="box-container">
       <h2
@@ -20,14 +23,14 @@ export default function Skills() {
       >
         {t("home.translate-skills")}
       </h2>
-      <div className="skills">
+      <div className={darkMode ? "skills dark" : "skills"}>
         <RiJavascriptFill className="js" data-tooltip-content="Javascript" />
         <FaHtml5 className="html" data-tooltip-content="HTML" />
         <FaCss3Alt className="css" data-tooltip-content="CSS" />
         <SiExpress className="exp" data-tooltip-content="Express" />
         <FaReact className="react" data-tooltip-content="React" />
         <FaSwift className="swift" data-tooltip-content="Swift" />
-        <DiMysql className="sql" data-tooltip-content="Mysql" />
+        <DiMysql className="sql" data-tooltip-content="MySql" />
         <FaNode className="node" data-tooltip-content="Node.js" />
         <FaGitAlt className="git" data-tooltip-content="Git" />
         <SiAdobephotoshop className="ps" data-tooltip-content="Photoshop" />

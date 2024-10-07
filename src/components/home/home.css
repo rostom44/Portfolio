@@ -1,11 +1,12 @@
 /* general */
+
 .box-container {
   border: 0.2rem solid transparent;
   border-radius: 0.5rem;
   padding: 1rem;
   margin: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  background-color: rgba(98, 133, 110, 0.5);
+  background-color: var(--color-box);
   position: relative;
 }
 .homeHeader {
@@ -26,7 +27,7 @@
 /* intro */
 
 h1 > span {
-  color: #04aa6d;
+  color: var(--color-accent);
   font-weight: bolder;
 }
 
@@ -35,14 +36,14 @@ h1 > span {
   border-radius: 50%; /* Use percentage for perfect circle */
   overflow: hidden; /* Hide overflowing content */
   /* background-color: #04aa6d; */
-  background-color: #029a63;
+  background-color: var(--color-secondary);
 
   height: 12rem;
   width: 12rem;
 }
 .img-circle.dark {
   /* background-color: aqua; */
-  background-color: lightslategray;
+  background-color: var(--color-secondary-dark);
 }
 
 .img-circle img {
@@ -63,11 +64,13 @@ h1 > span {
 .arrow a {
   text-decoration: none;
   margin-left: 0.35rem; /* Add some space between the text and icon */
-  color: lightslategray;
+  color: var(--color-secondary);
   padding-top: 0.1rem;
 }
 .arrow a:hover {
-  color: #04aa6d;
+  color: var(--color-hover);
+  transform: scale(1.2);
+  transition: transform 0.2s ease-in-out;
 }
 .arrow a:not(.active) {
   text-decoration: none;
@@ -78,9 +81,6 @@ h1 > span {
   justify-content: space-between;
   align-items: center;
 }
-.reactLogo {
-  display: none !important;
-}
 
 /* intro */
 
@@ -88,11 +88,17 @@ h1 > span {
 .github > svg {
   width: 10rem;
   height: 10rem;
-  color: lightslategray;
+  color: var(--color-secondary);
+}
+
+.github.dark > svg {
+  color: var(--color-secondary-dark);
 }
 
 .github > svg:hover {
   color: #111213;
+  transform: scale(1.2);
+  transition: transform 0.2s ease-in-out;
 }
 a.github {
   color: inherit !important;
@@ -102,11 +108,13 @@ a.github {
 .linkedin > svg {
   width: 10rem;
   height: 10rem;
-  color: lightslategray;
+  color: var(--color-secondary);
 }
 
 .linkedin > svg:hover {
   color: #0a66c2;
+  transform: scale(1.2);
+  transition: transform 0.2s ease-in-out;
 }
 a.linkedin {
   color: inherit !important;
@@ -119,6 +127,11 @@ a.linkedin {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  color: var(--color-secondary);
+}
+.skills.dark {
+  color: var(--color-secondary-dark);
+  background-color: transparent;
 }
 .skills > svg {
   width: 4rem;
@@ -195,6 +208,13 @@ a.linkedin {
   width: 2rem;
   padding: 0;
 }
+.refresh:hover {
+  background-color: var(--color-hover);
+  color: black;
+  transform: scale(1.2);
+  transition: transform 0.2s ease-in-out;
+  box-shadow: var(--shadow-button);
+}
 .quote {
   line-height: 1.5rem;
   font-weight: 700;
@@ -214,8 +234,8 @@ cite {
   bottom: 0;
   left: 0;
   height: 4px;
-  background-color: #4caf50;
-  animation: progressBar 18s linear infinite;
+  background-color: var(--color-primary);
+  animation: progressBar 17s linear infinite;
 }
 
 @keyframes progressBar {
@@ -244,10 +264,6 @@ cite {
 }
 
 @media (min-width: 950px) {
-  .reactLogo {
-    display: block !important;
-    width: 12rem !important;
-  }
   .homeBody {
     margin-right: 2.5rem;
     margin-left: 2.5rem;
