@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unknown-property */
 import { MdOutlineDoubleArrow } from "react-icons/md";
-
+import pfp from "../../assets/anime-dance.gif";
 import { useTheme } from "../../darkTheme/ThemeProvider";
 import { useTranslation } from "react-i18next";
 
@@ -14,7 +14,7 @@ export default function Intro() {
     <div className="box-container">
       <div className="introHeader">
         <div className={darkMode ? "img-circle dark" : "img-circle"}>
-          <img src="src\assets\anime-dance.gif" alt="pfp" />
+          <img src={pfp} alt="pfp" />
         </div>
       </div>
       <h1>
