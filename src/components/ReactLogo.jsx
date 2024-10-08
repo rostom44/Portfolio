@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { useLoader, useFrame } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import PropTypes from "prop-types";
-const modelPath = "/src/public/react-logo/reactLogo.gltf";
+const modelPath = "/react-logo/reactLogo.gltf";
 
 export default function Model({ mouseX, mouseY, ...props }) {
   const { nodes, materials } = useLoader(GLTFLoader, modelPath);
