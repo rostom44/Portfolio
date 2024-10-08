@@ -34,7 +34,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <ThemeProvider>
     <React.StrictMode>
       <I18nextProvider i18n={i18n}>
-        <RouterProvider router={router} basename={import.meta.env.BASE_URL} />
+        <RouterProvider router={router} basename="./" />
       </I18nextProvider>
     </React.StrictMode>
   </ThemeProvider>
