@@ -1,8 +1,8 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-// https://vitejs.dev/config/
-export default defineConfig({
+// Define the base URL based on the mode
+export default defineConfig(({ mode }) => ({
   plugins: [react()],
-  base: import.meta.env.MODE === "production" ? "/Portfolio/" : "/", // Use '/Portfolio/' in production
-});
+  base: mode === "production" ? "/Portfolio/" : "/", // Use 'mode' argument
+}));
