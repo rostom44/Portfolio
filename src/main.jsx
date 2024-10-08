@@ -34,13 +34,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <ThemeProvider>
     <React.StrictMode>
       <I18nextProvider i18n={i18n}>
-        <RouterProvider router={router} basename={import.meta.env.BASE_URL}>
-          {console.log(
-            `BASE_URL: ${import.meta.env.BASE_URL}, router: ${JSON.stringify(
-              router
-            )}`
-          )}
-        </RouterProvider>
+        <RouterProvider router={router} basename="/Portfolio/" />
       </I18nextProvider>
     </React.StrictMode>
   </ThemeProvider>
