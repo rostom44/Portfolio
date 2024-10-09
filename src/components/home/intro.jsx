@@ -3,6 +3,7 @@ import { MdOutlineDoubleArrow } from "react-icons/md";
 import pfp from "../../assets/anime-dance.gif";
 import { useTheme } from "../../darkTheme/ThemeProvider";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 import "./home.css";
 
@@ -24,9 +25,9 @@ export default function Intro() {
       <h2>{t("home.translate-fullStack")}</h2>
       <p className="arrow">
         {t("home.translate-aboutMe")}
-        <a href="about">
+        <Link to="/about">
           <MdOutlineDoubleArrow />
-        </a>
+        </Link>
       </p>
     </div>
   );
