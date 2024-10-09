@@ -24,7 +24,7 @@ export default function Intro() {
       <h2>{t("home.translate-fullStack")}</h2>
       <p className="arrow">
         {t("home.translate-aboutMe")}
-        <a href="/about">
+        <a href="about">
           <MdOutlineDoubleArrow />
         </a>
       </p>
