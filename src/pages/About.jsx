@@ -22,18 +22,20 @@ export default function About() {
   return (
     <div style={{ textAlign: "center" }}>
       <h1>{t("common.translate-temp")}</h1>
-      <Canvas className="reactLogo">
-        <ambientLight />
-        <OrbitControls enableZoom={false} enableRotate={false} />
-        <Suspense>
-          <ReactLogo
-            mouseX={mousePosition.x}
-            mouseY={mousePosition.y}
-            position={[0, 0, 0]}
-          />
-        </Suspense>
-        <Environment preset="forest" />
-      </Canvas>
+      <div className="reactLogo">
+        <Canvas>
+          <ambientLight />
+          <OrbitControls enableZoom={false} enableRotate={false} />
+          <Suspense>
+            <ReactLogo
+              mouseX={mousePosition.x}
+              mouseY={mousePosition.y}
+              position={[0, 0, 0]}
+            />
+          </Suspense>
+          <Environment preset="forest" />
+        </Canvas>
+      </div>
     </div>
   );
 }
