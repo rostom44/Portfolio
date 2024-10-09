@@ -5,17 +5,19 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import PropTypes from "prop-types";
 const modelPath = "/react-logo/reactLogo.gltf";
 
-export default function Model({ mouseX, mouseY, ...props }) {
+export default function Model({ mouseX, mouseY, isMobile, ...props }) {
   const { nodes, materials } = useLoader(GLTFLoader, modelPath);
   const logoRef = useRef();
 
   useFrame(() => {
-    // Correct the inversion by changing the sign of the xRotation
-    const xRotation = (mouseY / window.innerHeight - 0.5) * Math.PI;
-    const yRotation = (mouseX / window.innerWidth - 0.5) * Math.PI;
+    if (!isMobile) {
+      // Mouse tracking for desktop
+      const xRotation = (mouseY / window.innerHeight - 0.5) * Math.PI;
+      const yRotation = (mouseX / window.innerWidth - 0.5) * Math.PI;
 
-    logoRef.current.rotation.x = xRotation;
-    logoRef.current.rotation.y = yRotation;
+      logoRef.current.rotation.x = xRotation;
+      logoRef.current.rotation.y = yRotation;
+    }
   });
 
   materials["Material.002"].color.set("#4682B4");
@@ -38,4 +40,5 @@ export default function Model({ mouseX, mouseY, ...props }) {
 Model.propTypes = {
   mouseX: PropTypes.number.isRequired,
   mouseY: PropTypes.number.isRequired,
+  isMobile: PropTypes.bool.isRequired,
 };
