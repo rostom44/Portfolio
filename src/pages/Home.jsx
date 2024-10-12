@@ -4,7 +4,7 @@ import Github from "../components/home/github";
 import Linkdin from "../components/home/linkedin";
 import Skills from "../components/home/skills";
 
-import { useTheme } from "../darkTheme/ThemeProvider";
+import { useTheme } from "../context/ThemeProvider";
 export default function Home() {
   const { darkMode } = useTheme();
   return (

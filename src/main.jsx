@@ -8,7 +8,8 @@ import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Work from "./pages/Work.jsx";
 
-import { ThemeProvider } from "./darkTheme/ThemeProvider";
+import { ThemeProvider } from "./context/ThemeProvider.jsx";
+import { DeviceProvider } from "./context/deviceContext.jsx";
 
 const router = createBrowserRouter([
   {
@@ -33,9 +34,11 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <ThemeProvider>
     <React.StrictMode>
-      <I18nextProvider i18n={i18n}>
-        <RouterProvider router={router} basename="./" />
-      </I18nextProvider>
+      <DeviceProvider>
+        <I18nextProvider i18n={i18n}>
+          <RouterProvider router={router} basename="./" />
+        </I18nextProvider>
+      </DeviceProvider>
     </React.StrictMode>
   </ThemeProvider>
 );

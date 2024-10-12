@@ -1,7 +1,7 @@
 import { IoLogoGithub } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
 import "./home.css";
-import { useTheme } from "../../darkTheme/ThemeProvider";
+import { useTheme } from "../../context/ThemeProvider";
 export default function Github() {
   const { t } = useTranslation();
   const { darkMode } = useTheme;
