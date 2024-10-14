@@ -130,12 +130,12 @@ a.linkedin {
 /* linkedin */
 
 /* skills */
-
 .skills {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   color: var(--color-secondary);
+  gap: 0.3rem;
 }
 .skills.dark {
   color: var(--color-secondary-dark);
@@ -144,65 +144,56 @@ a.linkedin {
 .skills > svg {
   width: 4rem;
   height: 4rem;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  padding-top: 0.2rem;
-  padding-bottom: 0.6rem;
-}
-.js:hover {
-  transform: scale(1.3);
-  transition: transform 0.2s ease-in-out;
-  color: #f0db4f;
+  padding: 0.2rem 1rem 0.6rem;
+  transition:
+    transform 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+  border: none;
+  box-shadow: none;
+  outline: none;
 }
 
-.html:hover {
+/* Hover effect for desktop */
+.skills > svg:hover {
   transform: scale(1.3);
-  transition: transform 0.2s ease-in-out;
+}
+
+/* Active effect for mobile */
+.skills > svg.active {
+  transform: scale(1.3);
+}
+
+/* Individual colors */
+.js:hover {
+  color: #f0db4f;
+}
+.html:hover {
   color: #e34c26;
 }
 .css:hover {
-  transform: scale(1.3);
-  transition: transform 0.2s ease-in-out;
   color: #2965f1;
 }
-
 .exp:hover {
-  transform: scale(1.3);
-  transition: transform 0.2s ease-in-out;
   color: #5a6369;
 }
 .react:hover {
-  transform: scale(1.3);
-  transition: transform 0.2s ease-in-out;
   color: #61dafb;
 }
 .node:hover {
-  transform: scale(1.3);
-  transition: transform 0.2s ease-in-out;
   color: #339933;
 }
 .sql:hover {
-  transform: scale(1.3);
-  transition: transform 0.2s ease-in-out;
   color: #00758f;
 }
 .git:hover {
-  transform: scale(1.3);
-  transition: transform 0.2s ease-in-out;
   color: #f1502f;
 }
 .swift:hover {
-  transform: scale(1.3);
-  transition: transform 0.2s ease-in-out;
   color: #f05138;
 }
 .ps:hover {
-  transform: scale(1.3);
-  transition: transform 0.2s ease-in-out;
   color: #001e36;
 }
-
-/* skills */
 
 /* quote */
 .quote-header {
@@ -294,6 +285,9 @@ cite {
   }
   .box > p {
     margin-bottom: 1.4rem;
+  }
+  .skills {
+    gap: 0.5rem;
   }
 }
 
