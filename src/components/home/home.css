@@ -107,6 +107,7 @@ h1 > span {
   transform: scale(1.2);
   transition: transform 0.2s ease-in-out;
 }
+
 a.github {
   color: inherit !important;
 }
