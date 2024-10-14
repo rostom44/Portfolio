@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unknown-property */
 import { MdOutlineDoubleArrow } from "react-icons/md";
-import pfp from "../../assets/anime-dance.gif";
+//import pfp from "../../assets/anime-dance.gif";
+import pfp from "../../assets/js.gif";
 import { useTheme } from "../../context/ThemeProvider";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";

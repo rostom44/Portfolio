@@ -1,40 +1,31 @@
 import { useTranslation } from "react-i18next";
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useEffect, useState, useContext } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Environment } from "@react-three/drei";
 import ReactLogo from "../components/ReactLogo";
+import { DeviceContext } from "../context/deviceContext";
 import "../components/about/about.css";
+
 export default function About() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isMobile, setIsMobile] = useState(false);
+  const { deviceType } = useContext(DeviceContext);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleMouseMove = (event) => {
       setMousePosition({ x: event.clientX, y: event.clientY });
     };
 
-    // Detect if the device is mobile
-    const checkIsMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    // Add mouse move listener for desktop
-    if (!isMobile) {
+    // Add mouse move listener for desktop only
+    if (deviceType === "Desktop") {
       document.addEventListener("mousemove", handleMouseMove);
     }
 
-    // Check on initial load and on window resize
-    checkIsMobile();
-    window.addEventListener("resize", checkIsMobile);
-
-    // Cleanup event listeners
+    // Cleanup event listener on component unmount
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("resize", checkIsMobile);
     };
-  }, [isMobile]);
-
-  const { t } = useTranslation();
+  }, [deviceType]);
 
   return (
     <div style={{ textAlign: "center" }}>
@@ -42,12 +33,12 @@ export default function About() {
       <div className="reactLogo">
         <Canvas>
           <ambientLight />
-          {isMobile ? (
+          {deviceType === "Phone" || deviceType === "Tablet" ? (
             <OrbitControls
               enableZoom={false}
               enableRotate={true}
               autoRotate={true}
-            /> // Enable touch rotation for mobile
+            /> // Enable touch rotation for mobile/tablet
           ) : (
             <OrbitControls
               enableZoom={false}
@@ -59,7 +50,7 @@ export default function About() {
             <ReactLogo
               mouseX={mousePosition.x}
               mouseY={mousePosition.y}
-              isMobile={isMobile}
+              deviceType={deviceType}
               position={[0.1, 0, 0]}
             />
           </Suspense>

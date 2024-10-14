@@ -1,8 +1,10 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import { useContext } from "react";
 import Switch from "react-switch";
 import { IoMenu } from "react-icons/io5";
 import { useTheme } from "../../context/ThemeProvider";
+import { DeviceContext } from "../../context/deviceContext";
 import { useTranslation } from "react-i18next";
 import Sun from "../../assets/sun.svg";
 import Moon from "../../assets/moon.svg";
@@ -13,6 +15,10 @@ export default function Navbar() {
   const [menu, setMenu] = useState(false);
   const { darkMode, toggleTheme } = useTheme();
   const { t } = useTranslation();
+  const { deviceType } = useContext(DeviceContext);
+
+  const menuClassName =
+    deviceType === "Phone" ? "menu-button-mobile" : "menu-button";
 
   const handleToggle = () => {
     toggleTheme();
@@ -20,7 +26,7 @@ export default function Navbar() {
   return (
     <header className="nav_container">
       <nav className={darkMode ? "navbar dark" : "navbar"}>
-        <h2 className="text-logo">𝓡𝓞𝓢𝓣𝓞𝓜</h2>
+        <h2 className="text-logo">𝑅𝒪𝒮𝒯𝒪𝑀</h2>
         <div className="nav-buttons">
           <Lang />
           <div className="switch-box">
@@ -49,7 +55,7 @@ export default function Navbar() {
           </div>
           <button
             type="button"
-            className="menu-button"
+            className={menuClassName}
             onClick={() => {
               setMenu(!menu);
             }}

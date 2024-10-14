@@ -108,6 +108,7 @@ div ul.nav-list {
   overflow: hidden; /* hide the overflow */
   max-height: 0; /* initial state: hidden */
   transition: max-height 0.5s ease-in-out; /* add transition effect */
+  padding: 0;
 }
 
 .nav-list.active {
@@ -139,6 +140,14 @@ div ul li a.active {
   padding: 0.3rem 0.3rem 0.1rem 0.3rem;
 }
 .menu-button:hover {
+  background-color: var(--color-hover);
+  color: black;
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+  box-shadow: var(--shadow-button);
+}
+
+.menu-button-mobile:active {
   background-color: var(--color-hover);
   color: black;
   transform: scale(1.1);
