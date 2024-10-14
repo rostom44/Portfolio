@@ -108,6 +108,7 @@ div ul.nav-list {
   overflow: hidden; /* hide the overflow */
   max-height: 0; /* initial state: hidden */
   transition: max-height 0.5s ease-in-out; /* add transition effect */
+  padding: 0;
 }
 
 .nav-list.active {

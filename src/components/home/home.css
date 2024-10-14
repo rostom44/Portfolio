@@ -96,6 +96,9 @@ h1 > span {
   width: 10rem;
   height: 10rem;
   color: var(--color-secondary);
+  transition:
+    transform 0.2s ease-in-out,
+    color 0.2s ease-in-out;
 }
 
 .github.dark > svg {
@@ -105,7 +108,6 @@ h1 > span {
 .github > svg:hover {
   color: #111213;
   transform: scale(1.2);
-  transition: transform 0.2s ease-in-out;
 }
 
 a.github {
@@ -117,12 +119,14 @@ a.github {
   width: 10rem;
   height: 10rem;
   color: var(--color-secondary);
+  transition:
+    transform 0.2s ease-in-out,
+    color 0.2s ease-in-out;
 }
 
 .linkedin > svg:hover {
   color: #0a66c2;
   transform: scale(1.2);
-  transition: transform 0.2s ease-in-out;
 }
 a.linkedin {
   color: inherit !important;

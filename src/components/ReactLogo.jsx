@@ -3,14 +3,15 @@ import { useRef } from "react";
 import { useLoader, useFrame } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import PropTypes from "prop-types";
+
 const modelPath = "/react-logo/reactLogo.gltf";
 
-export default function Model({ mouseX, mouseY, isMobile, ...props }) {
+export default function ReactLogo({ mouseX, mouseY, deviceType, ...props }) {
   const { nodes, materials } = useLoader(GLTFLoader, modelPath);
   const logoRef = useRef();
 
   useFrame(() => {
-    if (!isMobile) {
+    if (deviceType === "Desktop") {
       // Mouse tracking for desktop
       const xRotation = (mouseY / window.innerHeight - 0.5) * Math.PI;
       const yRotation = (mouseX / window.innerWidth - 0.5) * Math.PI;
@@ -37,8 +38,8 @@ export default function Model({ mouseX, mouseY, isMobile, ...props }) {
   );
 }
 
-Model.propTypes = {
+ReactLogo.propTypes = {
   mouseX: PropTypes.number.isRequired,
   mouseY: PropTypes.number.isRequired,
-  isMobile: PropTypes.bool.isRequired,
+  deviceType: PropTypes.string.isRequired,
 };

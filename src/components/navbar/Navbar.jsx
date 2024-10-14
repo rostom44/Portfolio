@@ -26,7 +26,7 @@ export default function Navbar() {
   return (
     <header className="nav_container">
       <nav className={darkMode ? "navbar dark" : "navbar"}>
-        <h2 className="text-logo">𝓡𝓞𝓢𝓣𝓞𝓜</h2>
+        <h2 className="text-logo">𝑅𝒪𝒮𝒯𝒪𝑀</h2>
         <div className="nav-buttons">
           <Lang />
           <div className="switch-box">
