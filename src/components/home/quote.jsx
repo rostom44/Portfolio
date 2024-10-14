@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { useContext } from "react";
+import { DeviceContext } from "../../context/deviceContext";
 import { useTranslation } from "react-i18next";
 import { IoMdRefresh } from "react-icons/io";
 import "./home.css";
@@ -6,9 +8,13 @@ import quotesData from "../../public/data/quotes.json";
 
 export default function Quote() {
   const { t, i18n } = useTranslation();
+  const { deviceType } = useContext(DeviceContext);
   const [quote, setQuote] = useState(null);
   const [refresh, setRefresh] = useState(false);
   const [intervalId, setIntervalId] = useState(null);
+
+  // Choose the classname based on device type
+  const buttonClassName = deviceType === "Phone" ? "refresh-mobile" : "refresh";
 
   // Function to select a random quote based on the current language
   const fetchQuote = () => {
@@ -74,7 +80,7 @@ export default function Quote() {
     <div className="box-container">
       <div className="quote-header">
         <h2>{t("home.translate-quote")}</h2>
-        <button className="refresh" onClick={fetchQuote}>
+        <button className={buttonClassName} onClick={fetchQuote}>
           <IoMdRefresh />
         </button>
       </div>

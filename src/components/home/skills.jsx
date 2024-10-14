@@ -11,7 +11,7 @@ import { FaNode } from "react-icons/fa6";
 
 import { Tooltip } from "react-tooltip";
 import { useTranslation } from "react-i18next";
-import { useTheme } from "../../darkTheme/ThemeProvider";
+import { useTheme } from "../../context/ThemeProvider";
 export default function Skills() {
   const { t } = useTranslation();
   const { darkMode } = useTheme();

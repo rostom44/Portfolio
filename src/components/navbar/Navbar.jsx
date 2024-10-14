@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import Switch from "react-switch";
 import { IoMenu } from "react-icons/io5";
-import { useTheme } from "../../darkTheme/ThemeProvider";
+import { useTheme } from "../../context/ThemeProvider";
 import { useTranslation } from "react-i18next";
 import Sun from "../../assets/sun.svg";
 import Moon from "../../assets/moon.svg";

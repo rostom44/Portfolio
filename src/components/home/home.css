@@ -215,6 +215,15 @@ a.linkedin {
   width: 2rem;
   padding: 0;
 }
+
+.refresh {
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+  padding: 0;
+}
+
+/* Hover effect for desktop */
 .refresh:hover {
   background-color: var(--color-hover);
   color: black;
@@ -222,6 +231,16 @@ a.linkedin {
   transition: transform 0.2s ease-in-out;
   box-shadow: var(--shadow-button);
 }
+
+/* Hover effect for mobile */
+.refresh-mobile:active {
+  background-color: var(--color-hover);
+  color: black;
+  transform: scale(1.2);
+  transition: transform 0.2s ease-in-out;
+  box-shadow: var(--shadow-button);
+}
+
 .quote {
   line-height: 1.5rem;
   font-weight: 700;
