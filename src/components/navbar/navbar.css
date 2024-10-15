@@ -137,7 +137,10 @@ div ul li a.active {
 }
 .menu-button {
   display: block;
-  padding: 0.3rem 0.3rem 0.1rem 0.3rem;
+}
+
+.menu-button > svg {
+  padding: 0.1rem;
 }
 .menu-button:hover {
   background-color: var(--color-hover);
@@ -154,12 +157,12 @@ div ul li a.active {
   transition: transform 0.2s ease-in-out;
   box-shadow: var(--shadow-button);
 }
-button > svg {
-  width: 1.6rem;
-  height: 1.6rem;
-}
+
 @media (min-width: 500px) {
   .menu-button {
+    display: none;
+  }
+  .menu-button-mobile {
     display: none;
   }
   /* Showing the navigation on desktop */
@@ -176,18 +179,15 @@ button > svg {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .text-logo {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .menu-button {
     width: 1.9rem;
     height: 1.9rem;
   }
-  .menu-button > svg {
-    width: 1.3rem;
-    height: 1.3rem;
-  }
+
   .lang {
     width: 2.9rem;
     height: 1.5rem;
