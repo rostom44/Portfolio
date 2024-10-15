@@ -23,10 +23,15 @@ export default function Navbar() {
   const handleToggle = () => {
     toggleTheme();
   };
+
+  const handleNavLinkClick = () => {
+    // Close the menu when a nav link is clicked
+    setMenu(false);
+  };
   return (
     <header className="nav_container">
       <nav className={darkMode ? "navbar dark" : "navbar"}>
-        <h2 className="text-logo">𝑅𝒪𝒮𝒯𝒪𝑀</h2>
+        <h2 className="text-logo">𝓡𝓞𝓢𝓣𝓞𝓜</h2>
         <div className="nav-buttons">
           <Lang />
           <div className="switch-box">
@@ -66,13 +71,19 @@ export default function Navbar() {
       </nav>
       <ul className={menu ? "nav-list active" : "nav-list"}>
         <li>
-          <NavLink to="/">{t("common.translate-home")}</NavLink>
+          <NavLink to="/" onClick={handleNavLinkClick}>
+            {t("common.translate-home")}
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/about">{t("common.translate-about")}</NavLink>
+          <NavLink to="/about" onClick={handleNavLinkClick}>
+            {t("common.translate-about")}
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/work">{t("common.translate-work")}</NavLink>
+          <NavLink to="/work" onClick={handleNavLinkClick}>
+            {t("common.translate-work")}
+          </NavLink>
         </li>
       </ul>
     </header>
