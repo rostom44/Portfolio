@@ -39,6 +39,7 @@ export default function Work() {
               enableZoom={false}
               enableRotate={true}
               autoRotate={true}
+              enablePan={false}
             /> // Enable touch rotation for mobile
           ) : (
             <OrbitControls
