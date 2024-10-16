@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 :root {
-  --color-light: #f0f4f8; /* Lightened for better readability */
-  --color-dark: #1a1b1d; /* Slightly lightened for less harsh contrast */
-  --color-primary: #30b6b8; /* Keeping primary color as is */
-  --color-secondary: #49708a; /* Keeping secondary color as is */
-  --color-secondary-dark: #3a5a73; /* Darkened for a better hierarchy */
-  --color-accent: #2a9ca1; /* Slightly muted for softer look */
-  --color-hover: #28a0a2; /* Adjusted hover color for better contrast */
-  --color-box: rgba(72, 88, 95, 0.4); /* Slightly increased opacity */
-  --shadow-button: 0 4px 12px rgba(0, 0, 0, 0.2); /* Reduced shadow opacity */
+  --color-light: #f0f4f8;
+  --color-dark: #1a1b1d;
+  --color-primary: #30b6b8;
+  --color-secondary: #49708a;
+  --color-secondary-dark: #3a5a73;
+  --color-accent: #2a9ca1;
+  --color-hover: #28a0a2;
+  --color-box: rgba(72, 88, 95, 0.4);
+  --shadow-button: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 body {

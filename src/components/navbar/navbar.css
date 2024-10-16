@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Carter+One&family=Cookie&family=Lobster&display=swap");
+
 nav {
   background-color: var(--color-light);
   color: var(--color-dark);
@@ -17,6 +19,10 @@ nav {
 }
 .text-logo {
   cursor: default;
+  font-family: "Carter One", system-ui;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.1rem;
 }
 .text-logo:hover {
   color: var(--color-hover);
@@ -37,31 +43,52 @@ nav .menu {
   cursor: pointer;
 }
 .select-box {
-  padding: 0.2rem;
+  position: relative;
+  width: 5rem;
 }
+
 .lang {
-  padding: 3px;
+  width: 100%;
+  padding: 6px 10px; /* More comfortable padding */
   font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff;
-  color: #333;
+  border: 1px solid var(--color-primary);
+  border-radius: 6px; /* Slightly smaller radius for a refined look */
+  background-color: var(--color-light);
+  color: var(--color-dark);
   cursor: pointer;
   outline: none;
-  transition: all 0.3s;
+  appearance: none; /* Hide default arrow */
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.select-box::after {
+  content: "▼";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 10px; /* Smaller arrow */
+  color: var(--color-secondary);
 }
 
 .lang:hover {
-  background-color: #f9f9f9;
-  color: black;
-  transform: scale(1.1);
-  transition: transform 0.2s ease-in-out;
-  box-shadow: var(--shadow-button);
+  background-color: var(--color-secondary-dark);
+  color: var(--color-light);
 }
 
 .lang:focus {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 4px var(--color-accent);
 }
+
+/* Ensure no arrow on older browsers */
+.lang::-ms-expand {
+  display: none;
+}
+
 .switch-box {
   padding: 0.3rem;
 }
@@ -137,6 +164,7 @@ div ul li a.active {
 }
 .menu-button {
   display: block;
+  transform: scale(1.1);
 }
 
 .menu-button > svg {
@@ -145,7 +173,7 @@ div ul li a.active {
 .menu-button:hover {
   background-color: var(--color-hover);
   color: black;
-  transform: scale(1.1);
+  transform: scale(1.2);
   transition: transform 0.2s ease-in-out;
   box-shadow: var(--shadow-button);
 }
@@ -188,9 +216,14 @@ div ul li a.active {
     height: 1.9rem;
   }
 
+  .select-box {
+    width: auto;
+  }
   .lang {
-    width: 2.9rem;
-    height: 1.5rem;
+    width: 3.5rem; /* Full width for easier access */
+    padding: 5px; /* Larger padding for touch interaction */
+    font-size: 14px; /* Adjust font size for readability */
+    height: auto; /* Allow the height to adjust based on padding */
   }
   .switch-box {
     width: 3.5rem;
@@ -200,5 +233,8 @@ div ul li a.active {
   .toggle {
     height: 15px;
     width: 12px;
+  }
+  .nav-buttons {
+    gap: 0.4rem;
   }
 }
