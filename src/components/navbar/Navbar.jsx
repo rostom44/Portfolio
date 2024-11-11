@@ -82,7 +82,7 @@ export default function Navbar() {
         </li>
         <li>
           <NavLink to="/work" onClick={handleNavLinkClick}>
-            {t("common.translate-work")}
+            {t("common.translate-Resume")}
           </NavLink>
         </li>
       </ul>

@@ -3,6 +3,7 @@ import Quote from "../components/home/quote";
 import Github from "../components/home/github";
 import Linkdin from "../components/home/linkedin";
 import Skills from "../components/home/skills";
+import Projects from "../components/home/projects";
 
 import { useTheme } from "../context/ThemeProvider";
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <div className="homeMain">
         <Skills className />
         <Quote />
+        <Projects />
       </div>
     </div>
   );

@@ -4,7 +4,7 @@
     "translated-text": "C'est du français",
     "translate-home": "Accueil",
     "translate-about": "À propos",
-    "translate-work": "Travail",
+    "translate-Resume": "Résumé",
     "translate-temp": "Bientôt"
   },
 
@@ -15,6 +15,14 @@
     "translate-git": "Consultez mon GitHub",
     "translate-linkedin": "visitez mon linkedin",
     "translate-skills": "Compétences",
-    "translate-quote": "Citation:"
+    "translate-quote": "Citation:",
+    "translate-projects": "Projets"
+  },
+
+  "projects": {
+    "description1": "information sur Project 1",
+    "description2": "information sur Project 2",
+    "description3": "information sur Project 3",
+    "description4": "information sur Project 4"
   }
 }
