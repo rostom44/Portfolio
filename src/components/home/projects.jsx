@@ -13,7 +13,11 @@ export default function Projects() {
   const { t } = useTranslation();
   const projects = projectData.projects;
 
+  // State to manage which project is expanded
   const [activeIndex, setActiveIndex] = useState(null);
+
+  // Optional: Track Swiper's active slide
+  const [, setSwiperActiveIndex] = useState(0);
 
   const toggleProject = (index) => {
     setActiveIndex(index === activeIndex ? null : index);
@@ -31,7 +35,7 @@ export default function Projects() {
         loop
         spaceBetween={16}
         slidesPerView="auto"
-        onSlideChange={() => setActiveIndex(null)} // Collapse expanded view on slide change
+        onSlideChange={(swiper) => setSwiperActiveIndex(swiper.realIndex)} // Optional: Update Swiper active slide index
       >
         {projects.map((project, index) => (
           <SwiperSlide key={project.id} className="project">
