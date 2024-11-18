@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+
   flex-wrap: wrap;
 }
 
@@ -12,9 +13,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  padding-top: 1.2rem;
 }
 .box > p {
   font-size: large;
+  margin-bottom: 1.4rem;
 }
 .box > h3 {
   font-size: x-large;
@@ -31,16 +35,15 @@ h1 > span {
 
 .img-circle {
   display: inline-block;
-  border-radius: 50%; /* Use percentage for perfect circle */
+  border-radius: 50%; /* perfect circle */
   overflow: hidden; /* Hide overflowing content */
-  /* background-color: #04aa6d; */
+
   background-color: var(--color-secondary);
 
   height: 12rem;
   width: 12rem;
 }
 .img-circle.dark {
-  /* background-color: aqua; */
   background-color: var(--color-secondary-dark);
 }
 
@@ -63,12 +66,14 @@ h1 > span {
   text-decoration: none;
   margin-left: 0.35rem; /* Add some space between the text and icon */
   color: var(--color-secondary);
-  padding-top: 0.1rem;
+  padding-top: 0.05rem;
+  transform:
+    0.2s ease-in-out,
+    color 0.2s ease-in-out;
 }
 .arrow a:hover {
   color: var(--color-hover);
   transform: scale(1.2);
-  transition: transform 0.2s ease-in-out;
 }
 .arrow a:not(.active) {
   text-decoration: none;
@@ -261,6 +266,137 @@ cite {
 }
 /* quote */
 
+/* Project Section */
+/* Title styling */
+.title {
+  text-align: center;
+  font-size: 1.9rem;
+  cursor: default;
+  color: var(--color-dark); /* Ensure title color adapts to theme */
+}
+
+/* Swiper Styling */
+.swiper {
+  padding: 0; /* Add padding around Swiper */
+  overflow: hidden; /* Hide overflow for smooth sliding */
+}
+
+/* Navigation buttons (next/prev) */
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--color-primary);
+  transition: transform 0.3s ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  transform: scale(1.2); /* Slight zoom effect on hover */
+}
+
+/* Individual Project Styling */
+.project {
+  scroll-snap-align: start;
+  border: 1px solid; /* Accent border for better contrast */
+  border-radius: 8px;
+
+  min-width: 280px; /* Set width for each project item */
+  cursor: pointer;
+  transition:
+    transform 0.3s,
+    background-color 0.3s,
+    border-color 0.3s; /* Ensure smooth transitions */
+  background-color: var(--color-light); /* Light background for project */
+  color: var(--color-dark); /* Text color adapts to theme */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project:hover {
+  transform: scale(1.03);
+  background-color: var(--color-hover);
+  border-color: var(--color-primary); /* Hover border color */
+}
+
+.project h3 {
+  font-size: 18px;
+  margin-top: 10px;
+  color: var(--color-dark); /* Ensure the title color adapts to theme */
+}
+
+/* Project Image */
+.project-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* Expanded Content (Show on Click or Hover) */
+.expanded-content {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid; /* Use accent for border */
+  border-radius: 8px;
+  background-color: var(--color-light);
+}
+
+.project-description {
+  opacity: 1;
+}
+
+/* Button Styling within Project Content */
+.project-content button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: var(--color-primary); /* Primary button color */
+  color: var(--color-light); /* Button text color */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.project-content button:hover {
+  background-color: var(--color-hover); /* Button hover state */
+}
+
+/* Ensure button maintains accessibility in dark mode */
+.dark-mode .project-content button {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+}
+
+.dark-mode .project-content button:hover {
+  background-color: var(--color-hover);
+  transform: translateY(-2px); /* Hover button effect */
+}
+
+/* Dark theme support for project */
+.dark-mode .project {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  border-color: var(--color-primary);
+}
+
+.dark-mode .project:hover {
+  background-color: var(--color-dark-hover);
+  border-color: var(--color-secondary);
+}
+
+.dark-mode .expanded-content {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+/* Ensure smooth transitions when switching between dark and light themes */
+.dark-mode .project h3 {
+  color: var(--color-light);
+}
+
 @media (min-width: 702px) {
   .homeHeader {
     display: flex;
@@ -283,6 +419,22 @@ cite {
   }
   .skills {
     gap: 0.5rem;
+  }
+  .title {
+    font-size: 2.3rem;
+  }
+
+  .project-container {
+    gap: 1;
+  }
+  .project-img {
+    width: 100%;
+    max-width: 450px; /* Adjust max width as needed for desktop */
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto; /* Center image horizontally */
   }
 }
 

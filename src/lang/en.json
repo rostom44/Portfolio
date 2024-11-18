@@ -4,7 +4,7 @@
     "translated-text": "This is english",
     "translate-home": "Home",
     "translate-about": "About",
-    "translate-work": "Work",
+    "translate-Resume": "Resume",
     "translate-temp": "coming soon"
   },
 
@@ -15,6 +15,14 @@
     "translate-git": "Check my Github",
     "translate-linkedin": "visit my linkedin",
     "translate-skills": "Skills",
-    "translate-quote": "Quote:"
+    "translate-quote": "Quote:",
+    "translate-projects": "Projects"
+  },
+
+  "projects": {
+    "description1": "Detailed info about Project 1",
+    "description2": "Detailed info about Project 2",
+    "description3": "Detailed info about Project 3",
+    "description4": "Detailed info about Project 4"
   }
 }

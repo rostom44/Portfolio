@@ -1,0 +1,36 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "img": "src/assets/project/pro.png",
+      "alt": "Project 1 Image",
+      "title": "Project 1",
+      "description": "projects.description1",
+      "link": "https://example.com/project1"
+    },
+    {
+      "id": 2,
+      "img": "src/assets/project/pro.png",
+      "alt": "Project 2 Image",
+      "title": "Project 2",
+      "description": "projects.description2",
+      "link": "https://example.com/project2"
+    },
+    {
+      "id": 3,
+      "img": "src/assets/project/pro.png",
+      "alt": "Project 3 Image",
+      "title": "Project 3",
+      "description": "projects.description3",
+      "link": "https://example.com/project3"
+    },
+    {
+      "id": 4,
+      "img": "src/assets/project/pro.png",
+      "alt": "Project 4 Image",
+      "title": "Project 4",
+      "description": "projects.description4",
+      "link": "https://example.com/project4"
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Carter+One&family=Cookie&family=Lobster&display=swap");
 
+/* Navbar Base */
 nav {
   background-color: var(--color-light);
   color: var(--color-dark);
@@ -8,29 +9,36 @@ nav {
   align-items: center;
   padding: 1rem;
   border-bottom: 1px solid #333;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
+/* Text Logo */
+.text-logo {
+  color: var(--color-dark);
+  font-family: "Carter One", sans-serif;
+  font-style: italic;
+  letter-spacing: 0.1rem;
+  cursor: default;
+  transition: color 0.3s ease;
+}
+.text-logo:hover {
+  color: var(--color-hover);
+}
+/* Navbar Buttons */
 .nav-buttons {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
+/* Dark Mode Styling */
 .nav-buttons > button {
   margin: 0.2rem;
 }
-.text-logo {
-  cursor: default;
-  font-family: "Carter One", system-ui;
-  font-weight: 400;
-  font-style: italic;
-  letter-spacing: 0.1rem;
-}
-.text-logo:hover {
-  color: var(--color-hover);
-}
-.nav_container.navbar.dark {
+.navbar.dark {
   color: var(--color-light);
 }
-.dark a {
+.navbar.dark a {
   color: var(--color-light);
 }
 
@@ -42,53 +50,58 @@ nav .menu {
   margin: 0.15rem;
   cursor: pointer;
 }
-.select-box {
-  position: relative;
-  width: 5rem;
-}
 
-.lang {
-  width: 100%;
-  padding: 6px 10px; /* More comfortable padding */
+/* Language Dropdown */
+
+/* General container for the select box */
+
+/* Select box styling */
+.lang-select {
+  width: 100px; /* Adjust width */
+  padding: 8px 12px;
   font-size: 14px;
-  border: 1px solid var(--color-primary);
-  border-radius: 6px; /* Slightly smaller radius for a refined look */
+  font-family: sans-serif;
+  border-radius: 6px;
   background-color: var(--color-light);
   color: var(--color-dark);
   cursor: pointer;
   outline: none;
-  appearance: none; /* Hide default arrow */
+  appearance: none; /* Remove default select arrow */
   transition:
     background-color 0.3s ease,
     border-color 0.3s ease;
 }
 
-.select-box::after {
+/* Hover effect */
+.lang-select:hover {
+  background-color: var(--color-hover);
+  color: var(--color-light);
+}
+
+/* Custom dropdown arrow */
+.lang-select::after {
   content: "▼";
+  font-size: 12px;
   position: absolute;
   right: 12px;
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
-  font-size: 10px; /* Smaller arrow */
-  color: var(--color-secondary);
 }
 
-.lang:hover {
-  background-color: var(--color-secondary-dark);
+/* Dark theme adjustments */
+.dark-mode .lang-select {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  border: 1px solid var(--color-light);
+}
+
+.dark-mode .lang-select:hover {
+  background-color: var(--color-dark-hover);
   color: var(--color-light);
 }
 
-.lang:focus {
-  border-color: var(--color-accent);
-  box-shadow: 0 0 4px var(--color-accent);
-}
-
-/* Ensure no arrow on older browsers */
-.lang::-ms-expand {
-  display: none;
-}
-
+/* Toggle Switch */
 .switch-box {
   padding: 0.3rem;
 }
@@ -139,7 +152,7 @@ div ul.nav-list {
 }
 
 .nav-list.active {
-  max-height: 9rem; /* or any other value that fits your needs */
+  max-height: 9rem; /* Expand on activation */
 }
 
 div ul li a {
@@ -172,17 +185,13 @@ div ul li a.active {
 }
 .menu-button:hover {
   background-color: var(--color-hover);
-  color: black;
   transform: scale(1.2);
-  transition: transform 0.2s ease-in-out;
   box-shadow: var(--shadow-button);
 }
 
 .menu-button-mobile:active {
   background-color: var(--color-hover);
-  color: black;
   transform: scale(1.1);
-  transition: transform 0.2s ease-in-out;
   box-shadow: var(--shadow-button);
 }
 
@@ -216,19 +225,15 @@ div ul li a.active {
     height: 1.9rem;
   }
 
-  .select-box {
-    width: auto;
-  }
-  .lang {
-    width: 3.5rem; /* Full width for easier access */
-    padding: 5px; /* Larger padding for touch interaction */
-    font-size: 14px; /* Adjust font size for readability */
-    height: auto; /* Allow the height to adjust based on padding */
+  .lang-select {
+    width: 3.7rem; /* Compact dropdown on smaller screens */
+    height: 1.5rem;
+    padding: 0.2rem;
+    font-size: 12px;
   }
   .switch-box {
     width: 3.5rem;
     height: 1.6rem;
-    padding: 0;
   }
   .toggle {
     height: 15px;

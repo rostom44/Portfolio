@@ -16,7 +16,7 @@ export default function Intro() {
     <div className="box-container">
       <div className="introHeader">
         <div className={darkMode ? "img-circle dark" : "img-circle"}>
-          <img src={pfp} alt="pfp" />
+          <img src={pfp} alt="Profile Picture" />
         </div>
       </div>
       <h1>

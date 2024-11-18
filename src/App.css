@@ -1,29 +1,58 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+/* Root Variables */
 :root {
-  --color-light: #f0f4f8;
-  --color-dark: #1a1b1d;
-  --color-primary: #30b6b8;
-  --color-secondary: #49708a;
-  --color-secondary-dark: #3a5a73;
-  --color-accent: #2a9ca1;
-  --color-hover: #28a0a2;
-  --color-box: rgba(72, 88, 95, 0.4);
-  --shadow-button: 0 4px 12px rgba(0, 0, 0, 0.2);
+  --color-light: #f4f4f4; /* Softer white */
+  --color-dark: #2e2e2e; /* Dark gray for better contrast */
+  --color-primary: #ff616d; /* Adjusted primary color for a softer red */
+  --color-secondary: #1e88e5cb; /* Slightly calmer blue */
+  --color-secondary-dark: #1565c0; /* Darker blue for contrast */
+  --color-accent: #f6a667; /* Warmer accent color */
+  --color-hover: #e55353; /* Slightly muted hover color */
+  --color-box: rgba(100, 180, 246, 0.093); /* Lighter blue box */
+  --shadow-button: 0 4px 6px rgba(0, 0, 0, 0.1); /* Softer shadow */
+}
+
+/* Dark Theme Variables */
+html.dark {
+  --color-light: #121212;
+  --color-dark: #f8f9fa;
+  --color-primary: #ff4f5a;
+  --color-secondary: #1565c0;
+  --color-secondary-dark: #1e90ff;
+  --color-accent: #ffb74d;
+  --color-hover: #ff5f65;
+  --color-box: rgba(255, 255, 255, 0.1);
+  --shadow-button: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 body {
-  line-height: 1;
+  line-height: 0.9;
   min-height: 100vh;
   margin: 0;
   padding: 0;
   border: 0;
   font-family: "Lato", sans-serif;
   box-sizing: border-box;
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 ol,
 ul {
   list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-hover);
 }
 button {
   border-radius: 8px;
@@ -33,7 +62,12 @@ button {
   font-weight: 500;
   font-family: inherit;
   cursor: pointer;
-  transition: border-color 0.25s;
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  transition:
+    background-color 0.25s,
+    border-color 0.25s,
+    transform 0.15s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,15 +77,15 @@ button > svg {
   height: 1.6rem;
   margin: 0 auto;
 }
-.light {
-  background-color: var(--color-light);
+button:hover {
+  background-color: var(--color-hover);
+  transform: translateY(-2px);
 }
 
-.dark {
-  background-color: var(--color-dark);
-  color: var(--color-light);
+button:active {
+  transform: translateY(0);
 }
-
+/* Container Styles */
 .box-container {
   border: 0.2rem solid transparent;
   border-radius: 0.5rem;
@@ -60,6 +94,9 @@ button > svg {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   background-color: var(--color-box);
   position: relative;
+  transition:
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
 }
 .box-container:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);

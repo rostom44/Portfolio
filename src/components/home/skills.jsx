@@ -45,11 +45,7 @@ export default function Skills() {
 
   return (
     <div className="box-container">
-      <h2
-        style={{ textAlign: "center", fontSize: "2.3rem", cursor: "default" }}
-      >
-        {t("home.translate-skills")}
-      </h2>
+      <h2 className="title">{t("home.translate-skills")}</h2>
       <div className={darkMode ? "skills dark" : "skills"}>
         {skillIcons.map(({ icon: Icon, className, tooltip }, index) => (
           <Icon
