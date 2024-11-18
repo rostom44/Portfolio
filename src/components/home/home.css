@@ -287,7 +287,11 @@ cite {
   color: var(--color-primary);
   transition: transform 0.3s ease;
 }
-
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 2.3rem !important;
+  font-weight: bolder;
+}
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
   transform: scale(1.2); /* Slight zoom effect on hover */
@@ -299,7 +303,7 @@ cite {
   border: 1px solid; /* Accent border for better contrast */
   border-radius: 8px;
 
-  min-width: 280px; /* Set width for each project item */
+  min-width: 200px; /* Set width for each project item */
   cursor: pointer;
   transition:
     transform 0.3s,
@@ -435,6 +439,10 @@ cite {
     object-fit: cover;
     display: block;
     margin: 0 auto; /* Center image horizontally */
+  }
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    font-size: 3.1rem !important;
   }
 }
 
