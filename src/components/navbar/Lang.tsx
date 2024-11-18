@@ -12,43 +12,30 @@ const Lang = () => {
     if (savedLang) {
       setLang(JSON.parse(savedLang));
     } else {
-      setLang(Language.FR);
+      setLang(Language.FR); // Default to French if no lang is saved
     }
-  }, []); // Run this effect only once on component mount
+  }, []);
 
   useEffect(() => {
-    localStorage.setItem("lang", JSON.stringify(lang));
-  }, [lang]); // Save the lang
+    localStorage.setItem("lang", JSON.stringify(lang)); // Save language selection to localStorage
+    i18n.changeLanguage(lang); // Change the language using i18n
+  }, [lang, i18n]);
 
-  let changeLanguage = (event: ChangeEvent<HTMLSelectElement>) => {
-    let language = event.target.value;
-
-    switch (language) {
-      case Language.EN:
-        setLang(Language.EN);
-        i18n.changeLanguage(Language.EN);
-        break;
-      case Language.FR:
-      default:
-        setLang(Language.FR);
-        i18n.changeLanguage(Language.FR);
-        break;
-    }
+  const handleLangChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    const selectedLang = event.target.value as Language;
+    setLang(selectedLang);
   };
 
   return (
-    <div>
-      <div className="select-box">
-        <select
-          value={lang}
-          name="language"
-          onChange={changeLanguage}
-          className="lang"
-        >
-          <option value={Language.FR}>FR</option>
-          <option value={Language.EN}>EN</option>
-        </select>
-      </div>
+    <div className="select-container">
+      <select
+        value={lang}
+        onChange={handleLangChange}
+        aria-label="Select Language"
+      >
+        <option value={Language.FR}>FR</option>
+        <option value={Language.EN}>EN</option>
+      </select>
     </div>
   );
 };

@@ -20,10 +20,6 @@ export default function Navbar() {
   const menuClassName =
     deviceType === "Phone" ? "menu-button-mobile" : "menu-button";
 
-  const handleToggle = () => {
-    toggleTheme();
-  };
-
   const handleNavLinkClick = () => {
     // Close the menu when a nav link is clicked
     setMenu(false);
@@ -37,7 +33,7 @@ export default function Navbar() {
           <div className="switch-box">
             <Switch
               className="toggle"
-              onChange={handleToggle}
+              onChange={toggleTheme}
               checked={darkMode}
               offColor="#000"
               onColor="#74a8d5"

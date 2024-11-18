@@ -1,15 +1,17 @@
 import { useTranslation } from "react-i18next";
-
 import { useState } from "react";
-import { useSwipeable } from "react-swipeable";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation, Autoplay } from "swiper/modules";
+import "swiper/css/autoplay";
 import projectData from "../../public/data/projects.json";
 import Project from "./project";
+import { IoLogoGithub } from "react-icons/io5";
 
 export default function Projects() {
   const { t } = useTranslation();
-
-  // Sample projects data
-  const projects = projectData.projects.map((project) => project);
+  const projects = projectData.projects;
 
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -17,28 +19,47 @@ export default function Projects() {
     setActiveIndex(index === activeIndex ? null : index);
   };
 
-  const swipeHandlers = useSwipeable({
-    onSwipedLeft: () =>
-      setActiveIndex((prevIndex) => (prevIndex + 1) % projects.length),
-    onSwipedRight: () =>
-      setActiveIndex(
-        (prevIndex) => (prevIndex - 1 + projects.length) % projects.length
-      ),
-  });
-
   return (
     <div className="box-container">
       <h2 className="title">{t("home.translate-projects")}</h2>
-      <div className="project-container" {...swipeHandlers}>
+
+      {/* Swiper Carousel */}
+      <Swiper
+        modules={[Navigation, Autoplay]}
+        navigation
+        autoplay={{ delay: 3000, disableOnInteraction: true }}
+        loop
+        spaceBetween={16}
+        slidesPerView="auto"
+        onSlideChange={() => setActiveIndex(null)} // Collapse expanded view on slide change
+      >
         {projects.map((project, index) => (
-          <Project
-            key={project.id}
-            project={project}
-            isOpen={index === activeIndex}
-            onToggle={() => toggleProject(index)}
-          />
+          <SwiperSlide key={project.id} className="project">
+            <Project
+              project={project}
+              isOpen={index === activeIndex}
+              onToggle={() => toggleProject(index)} // Toggle expanded view
+            />
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
+
+      {/* Expanded Content Below Carousel */}
+      {activeIndex !== null && (
+        <div className="expanded-content">
+          <h3>{projects[activeIndex].title}</h3>
+          <p>{t(projects[activeIndex].description)}</p>
+          <a
+            href={projects[activeIndex].link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button>
+              <IoLogoGithub />
+            </button>
+          </a>
+        </div>
+      )}
     </div>
   );
 }

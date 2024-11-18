@@ -1,26 +1,10 @@
 import PropTypes from "prop-types";
-import { useSpring, animated } from "react-spring";
-import { useTranslation } from "react-i18next";
 
-function Project({ project, isOpen, onToggle }) {
-  const { t } = useTranslation();
-
-  const expandAnimation = useSpring({
-    height: isOpen ? "auto" : "0px",
-    opacity: isOpen ? 1 : 0,
-    overflow: "hidden",
-  });
-
+function Project({ project, onToggle }) {
   return (
-    <div className="project" onClick={onToggle}>
-      <img src={project.img} alt={project.alt} />
+    <div className="project" onClick={onToggle} role="button" tabIndex="0">
+      <img className="project-img" src={project.img} alt={project.alt} />
       <h3>{project.title}</h3>
-      <animated.div style={expandAnimation} className="project-content">
-        <p>{t(project.description)}</p>
-        <a href={project.link} target="_blank" rel="noopener noreferrer">
-          <button></button>
-        </a>
-      </animated.div>
     </div>
   );
 }
