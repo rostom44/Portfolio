@@ -40,8 +40,8 @@ h1 > span {
 
   background-color: var(--color-secondary);
 
-  height: 12rem;
-  width: 12rem;
+  height: 10rem;
+  width: 10rem;
 }
 .img-circle.dark {
   background-color: var(--color-secondary-dark);
@@ -52,6 +52,10 @@ h1 > span {
   width: 100%;
   height: 100%;
   object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+.intro {
+  font-size: 1.8rem;
 }
 .arrow {
   display: flex;
