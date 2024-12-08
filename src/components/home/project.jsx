@@ -3,7 +3,9 @@ import PropTypes from "prop-types";
 function Project({ project, onToggle }) {
   return (
     <div className="project" onClick={onToggle} role="button" tabIndex="0">
-      <img className="project-img" src={project.img} alt={project.alt} />
+      <div className="project-img-container">
+        <img className="project-img" src={project.img} alt={project.alt} />
+      </div>
       <h3>{project.title}</h3>
     </div>
   );

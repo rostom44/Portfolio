@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 /* Root Variables */
 :root {
-  --color-light: #f4f4f4; /* Softer white */
-  --color-dark: #2e2e2e; /* Dark gray for better contrast */
-  --color-primary: #ff616d; /* Adjusted primary color for a softer red */
-  --color-secondary: #1e88e5cb; /* Slightly calmer blue */
-  --color-secondary-dark: #1565c0; /* Darker blue for contrast */
-  --color-accent: #f6a667; /* Warmer accent color */
-  --color-hover: #e55353; /* Slightly muted hover color */
-  --color-box: rgba(100, 180, 246, 0.093); /* Lighter blue box */
-  --shadow-button: 0 4px 6px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  --color-light: #faf8f5; /* Warm off-white */
+  --color-dark: #2e2e2e; /* Neutral dark gray */
+  --color-primary: #e63946; /* Vibrant red */
+  --color-secondary: #457b9d; /* Muted teal-blue */
+  --color-secondary-dark: #1d3557; /* Rich navy blue */
+  --color-accent: #f4a261; /* Warm terracotta */
+  --color-hover: #d62828; /* Bold crimson */
+  --color-box: rgba(244, 162, 97, 0.1); /* Light accent box */
+  --shadow-button: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
 /* Dark Theme Variables */
